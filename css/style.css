@@ -7,6 +7,7 @@ Base Styles ============
     --very-dark-cyan: hsl(179, 100%, 13%);
     --transparent-white-75: hsla(0, 0%, 100%, 0.75);
     --very-light-gray: hsl(0, 0%, 95%);
+    --white: hsl(0, 0%, 100%);
     font-size: 15px;
 }
 
@@ -24,6 +25,10 @@ img {
     height: auto;
 }
 
+a:link {
+    text-decoration: none;
+}
+
 /* =====================
 Layout Styles ==========
 */
@@ -35,8 +40,34 @@ main {
     justify-content: center;
     align-items: center;
 }
+.container {
+    max-width: 20.4375em;
+}
+
 .component-section {
     padding: 3.0625em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.component-section:first-child {
+    border-radius: 8px 8px 0 0;
+}
+
+.component-section:nth-child(2) {
+    border-radius: 0;
+}
+
+.component-section:last-child {
+    border-radius: 0 0 8px 8px;
+}
+
+.component-img {
+    order: -1;
+    width: 64px;
+    height: 40px;
+    margin-bottom: 2.1875em;
 }
 
 .bg-orange {
@@ -56,6 +87,23 @@ Typography Styles ======
 */
 .component-title {
     font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2.667rem;
+    color: var(--white);
+}
+
+.component-text {
+    padding: 1.6666666666666667em 0;
+}
+
+.component-btn {
+    background: var(--very-light-gray);
+    color: var(--dark-cyan);
+    text-transform: capitalize;
+    padding: 0.8em 2.1em;
+    border-radius: 25px;
+    align-self: flex-start;
 }
 
 /* =====================
