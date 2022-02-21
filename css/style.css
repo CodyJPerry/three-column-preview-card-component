@@ -39,7 +39,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 4em 0;
 }
+
 .container {
     max-width: 20.4375em;
 }
@@ -90,22 +92,71 @@ Typography Styles ======
     text-transform: uppercase;
     font-weight: 700;
     font-size: 2.667rem;
-    color: var(--white);
 }
 
 .component-text {
     padding: 1.6666666666666667em 0;
+    line-height: 1.66;
+    letter-spacing: 0.5px;
 }
 
 .component-btn {
     background: var(--very-light-gray);
     color: var(--dark-cyan);
     text-transform: capitalize;
-    padding: 0.8em 2.1em;
+    padding: 0.9em 2.1em;
     border-radius: 25px;
     align-self: flex-start;
+    border: 2.5px solid transparent;
+    transition: all 0.5s;
+}
+
+.bg-orange .component-btn {
+    color: var(--bright-orange);
+}
+
+.bg-cyan .component-btn {
+    color: var(--dark-cyan);
+}
+
+.bg-dark-cyan .component-btn {
+    color: var(--very-dark-cyan);
+}
+
+/* =====================
+Custom Styles ======
+*/
+.component-btn:hover,
+.component-btn:focus {
+    color: var(--white);
+    background: transparent;
+    border: 2.5px solid var(--white);
 }
 
 /* =====================
 Media Queries ==========
 */
+@media (min-width: 60em) {
+    .container {
+        max-width: 61.333333333333336em;
+        display: flex;
+        height: 33.333333333333336em;
+    }
+
+    .component-text {
+        padding-bottom: 5.533333333333333em;
+    }
+
+    .component-section:first-child {
+        border-radius: 8px 0 0 8px;
+    }
+    
+    .component-section:nth-child(2) {
+        border-radius: 0;
+    }
+    
+    .component-section:last-child {
+        border-radius: 0 8px 8px 0;
+    }
+
+}
