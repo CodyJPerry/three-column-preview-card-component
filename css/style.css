@@ -133,6 +133,15 @@ Custom Styles ======
     border: 2.5px solid var(--white);
 }
 
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    overflow: hidden;
+  }
+
 /* =====================
 Media Queries ==========
 */
